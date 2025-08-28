@@ -1,2 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.data/
+/data/
 .env
-infra/data/
+node_modules/
+frontend/dist/
+.DS_Store
+/Users/
+aligned_A.png
+aligned_B.png

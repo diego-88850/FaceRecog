@@ -1,19 +1,25 @@
 fastapi==0.115.0
 uvicorn[standard]==0.30.6
-numpy==1.26.4
-torch==2.3.1
-facenet-pytorch==2.6.0
-mediapipe==0.10.14
-opencv-python-headless==4.10.0.84
-SQLAlchemy==2.0.32
 python-multipart==0.0.9
 pydantic==2.8.2
+numpy==2.1.0
+opencv-python-headless==4.10.0.84
+mediapipe==0.10.14
+SQLAlchemy==2.0.32
+alembic==1.13.2
+opencv-python-headless==4.10.0.84
+facenet-pytorch==2.5.3
+# Pin torch to your CPU macOS arm64 wheel version after local install.
+# Example (adjust if needed):
+# torch==2.3.1
+# Testing & tooling
 pytest==8.3.2
 pytest-cov==5.0.0
-httpx==0.27.0
+httpx==0.27.2
 anyio==4.4.0
 black==24.8.0
 isort==5.13.2
 flake8==7.1.1
 mypy==1.11.1
-python-dotenv==1.0.1
+pre-commit==3.8.0
+torch==2.3.1
