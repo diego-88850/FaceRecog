@@ -36,12 +36,12 @@ flowchart LR
 ---
 
 ## Repository layout
-```
+<pre>
 backend/
   app.py                 # FastAPI app: /register, /verify, /healthz
-  face.py                # FaceService: detect → align → embed
+  face.py                # FaceService: detect -> align -> embed
   config.py              # Settings (Pydantic) from env vars
-  image_io.py            # EXIF-safe bytes → BGR decode (shared by endpoints)
+  image_io.py            # EXIF-safe bytes -> BGR decode (shared by endpoints)
   scripts/
     sanity.py            # cosine sanity check on two images
   tests/
@@ -53,7 +53,7 @@ backend/
     assets/
       pratt1.jpg
       pratt2.jpg
-```
+</pre>
 
 ---
 
@@ -132,7 +132,7 @@ curl -s -X POST "http://localhost:8080/verify" \
 
 ---
 
-## 🧪 Testing
+## Testing
 ### Quick run (deterministic; great for CI)
 By default, tests use **fake detection/embedding** so they’re fast & stable.
 ```bash
