@@ -19,18 +19,18 @@ A minimal, privacy‑friendly face **authentication & identification** service. 
 ```mermaid
 flowchart LR
   subgraph Client
-    A[Enroll / Verify Request]\n(images + form-data)
+    A["Enroll / Verify Request<br/>(images + form-data)"]
   end
-  subgraph Server(FastAPI)
-    IO[image_io.py\nEXIF-safe decode]
-    D[MediaPipe\nDetect + Landmarks]
-    AL[Align 160×160]
-    FN[FaceNet\n(Inception-ResNet v1)]
-    DB[(SQLite\nEmbeddings only)]
+  subgraph "Server (FastAPI)"
+    IO["image_io.py<br/>EXIF-safe decode"]
+    D["MediaPipe<br/>Detect + Landmarks"]
+    AL["Align 160×160"]
+    FN["FaceNet<br/>(Inception-ResNet v1)"]
+    DB[("SQLite<br/>Embeddings only")]
   end
   A --> IO --> D --> AL --> FN
-  FN -->|auth/id compare| DB
-  DB -->|decision + score| A
+  FN -->|"auth/id compare"| DB
+  DB -->|"decision + score"| A
 ```
 
 ---
